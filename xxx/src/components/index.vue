@@ -6,17 +6,20 @@
     <el-row class="row2">
       <TableComponent></TableComponent>
     </el-row>
+    <createBoard></createBoard>
   </div>
 </template>
 
 <script>
 import TableComponent from './table/index.vue'
 import ButtonComponent from './button/index.vue'
+import createBoard from './dialog/createBoard.vue'
 export default {
   name: 'IndexApp',
   components: {
     TableComponent,
-    ButtonComponent
+    ButtonComponent,
+    createBoard
   },
   methods: {
 
