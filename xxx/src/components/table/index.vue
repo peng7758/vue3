@@ -8,8 +8,8 @@
       <el-table-column prop="time" label="时间" width="227"></el-table-column>
       <el-table-column label="操作">
         <template #default="scope">
-          <el-button size="small" @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
-          <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+          <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+          <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
         </template>
       </el-table-column>
       <el-table-column v-for="{ item, index } in headers" :key="index">
@@ -39,7 +39,12 @@ export default {
     }
   },
   methods: {
-
+    handleEdit(index, row) {
+      console.log(index, row);
+    },
+    handleDelete(index, row) {
+      console.log(index, row);
+    }
   }
 }
 </script>

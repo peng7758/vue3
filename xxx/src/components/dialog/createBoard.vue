@@ -8,13 +8,13 @@ import { computed } from 'vue';
           <tr>
             <td>版本名称</td>
             <td>
-              <input />
+              <input :value="boardName"/>
             </td>
           </tr>
           <tr>
             <td>继承版本</td>
             <td>
-              <el-select></el-select>
+              <el-select v-model="boards"></el-select>
             </td>
           </tr>
           <tr>
@@ -30,9 +30,9 @@ import { computed } from 'vue';
     </template>
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="cancelDialog">Cancel</el-button>
+        <el-button @click="cancelDialog">取消</el-button>
         <el-button type="primary" @click="confirmDialog">
-          Confirm
+          确认
         </el-button>
       </div>
     </template>
@@ -53,7 +53,9 @@ export default {
   // },
   data() {
     return {
-      description: ''
+      description: '',
+      boardName: '',
+      boards: []
     }
   },
   computed: {
